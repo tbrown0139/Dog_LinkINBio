@@ -1,144 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Link in Bio</title>
-  <style>
-    :root {
-      --card-radius: 24px;
-      --sheet-radius: 24px 24px 0 0;
-      --primary-color: #000;
-      --accent-color: #007aff;
-      --bg-color: #f5f5f7;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Paws in Paradise - Hawaii's Premier Mobile Dog Daycare">
+    <meta name="theme-color" content="#4FD1C5">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style">
+    <link rel="preload" as="image" href="/images/hawaii-bg.webp">
+    
+    <title>Paws in Paradise | Hawaii's Mobile Dog Daycare</title>
+    
+    <!-- Critical CSS inline for faster paint -->
+    <style>
+        :root {
+            --primary: #4FD1C5;
+            --text: #2D3748;
+            --background: #F7FAFC;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
 
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 40px 20px;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .logo {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 32px;
-    }
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                        url('/images/hawaii-bg.webp') center/cover fixed;
+            display: grid;
+            place-items: center;
+            padding: 1rem;
+        }
 
-    .card {
-      background: #fff;
-      border-radius: var(--card-radius);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      padding: 20px;
-      margin-bottom: 20px;
-      width: 100%;
-      max-width: 420px;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+        .container {
+            width: min(100%, 24rem);
+            animation: fadeIn 0.6s ease-out;
+        }
 
-    .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
-    }
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
 
-    .card button {
-      background-color: var(--accent-color);
-      color: #fff;
-      border: none;
-      padding: 14px 24px;
-      border-radius: 12px;
-      font-size: 16px;
-      cursor: pointer;
-      width: 100%;
-    }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            border-radius: 20px;
+            background: var(--primary);
+        }
 
-    .sheet {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 90vh;
-      background: #fff;
-      border-radius: var(--sheet-radius);
-      box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.2);
-      transform: translateY(100%);
-      transition: transform 0.3s ease-in-out;
-      padding: 24px;
-      overflow-y: auto;
-    }
+        h1 {
+            color: var(--text);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
 
-    .sheet.open {
-      transform: translateY(0);
-    }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
 
-    .close-btn {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      background: white;
-      border: none;
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
+        .button {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--background);
+            color: var(--text);
+            padding: 1rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-    .sheet h2 {
-      margin-top: 48px;
-    }
-  </style>
+        .button:hover {
+            transform: translateY(-2px);
+            background: white;
+        }
+
+        .button span {
+            font-size: 1.25rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .button, .container {
+                animation: none;
+                transition: none;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="logo">Your Brand</div>
-
-  <div class="card">
-    <button onclick="openSheet('about')">About Us</button>
-  </div>
-  <div class="card">
-    <button onclick="openSheet('how')">How We Work</button>
-  </div>
-  <div class="card">
-    <button onclick="openSheet('book')">Book Now</button>
-  </div>
-
-  <div class="sheet" id="sheet">
-    <button class="close-btn" onclick="closeSheet()">&times;</button>
-    <div id="sheetContent"></div>
-  </div>
-
-  <script>
-    const sheet = document.getElementById("sheet");
-    const sheetContent = document.getElementById("sheetContent");
-
-    function openSheet(type) {
-      let content = "";
-      switch(type) {
-        case "about":
-          content = `<h2>About Us</h2><p>We are passionate about helping you grow. Learn more about our mission and vision here.</p>`;
-          break;
-        case "how":
-          content = `<h2>How We Work</h2><p>Our process is simple: we listen, plan, and deliver quality results. Here's how it works...</p>`;
-          break;
-        case "book":
-          content = `<h2>Book Now</h2><p>Ready to get started? Schedule your session or consultation here.</p>`;
-          break;
-      }
-      sheetContent.innerHTML = content;
-      sheet.classList.add("open");
-    }
-
-    function closeSheet() {
-      sheet.classList.remove("open");
-    }
-  </script>
+    <main class="container">
+        <div class="card">
+            <div class="logo" role="img" aria-label="Paws in Paradise Logo"></div>
+            <h1>Paws in Paradise</h1>
+            <div class="button-group">
+                <a href="/about" class="button">
+                    <span>🏝️</span>
+                    About Our Paradise
+                </a>
+                <a href="/services" class="button">
+                    <span>🚐</span>
+                    Our Island Adventures
+                </a>
+                <a href="/booking" class="button">
+                    <span>🐕</span>
+                    Reserve Your Spot
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
