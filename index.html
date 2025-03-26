@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Paws in Paradise - Hawaii's Premier Mobile Dog Daycare">
+    <meta name="description" content="Ruff Ranch - Hawaii's Premier Mobile Dog Daycare">
     <meta name="theme-color" content="#4FD1C5">
     
     <!-- Preload critical assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style">
     <link rel="preload" as="image" href="/images/hawaii-bg.webp">
     
-    <title>Paws in Paradise | Hawaii's Mobile Dog Daycare</title>
+    <title>Ruff Ranch | Hawaii's Mobile Dog Daycare</title>
     
     <!-- Critical CSS inline for faster paint -->
     <style>
@@ -31,8 +31,17 @@
         body {
             min-height: 100vh;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                        url('/images/hawaii-bg.webp') center/cover fixed;
+            background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)
+                ),
+                url('bg.jpg') center/cover no-repeat fixed;
+            /* Optimize for mobile */
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             display: grid;
             place-items: center;
             padding: 1rem;
@@ -44,9 +53,9 @@
         }
 
         .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 20px;
             padding: 2rem;
             box-shadow: var(--shadow);
@@ -78,7 +87,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            background: var(--background);
+            background: rgba(255, 255, 255, 0.95);
             color: var(--text);
             padding: 1rem;
             border-radius: 14px;
@@ -108,28 +117,48 @@
                 transition: none;
             }
         }
+
+        /* Add new footer styles */
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer .powered-by {
+            opacity: 0.45;
+            color: rgba(200, 200, 200, 0.8);
+        }
+
+        .footer a {
+            color: rgba(200, 200, 200, 0.8);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
+            color: #cccccc;
+        }
     </style>
 </head>
 <body>
     <main class="container">
         <div class="card">
-            <div class="logo" role="img" aria-label="Paws in Paradise Logo"></div>
-            <h1>Paws in Paradise</h1>
+            <div class="logo" role="img" aria-label="Ruff Ranch Logo"></div>
+            <h1>Ruff Ranch</h1>
             <div class="button-group">
                 <a href="/about" class="button">
                     <span>🏝️</span>
-                    About Our Paradise
+                    About Our Ranch
                 </a>
                 <a href="/services" class="button">
                     <span>🚐</span>
-                    Our Island Adventures
+                    Our Adventures
                 </a>
                 <a href="/booking" class="button">
-                    <span>🐕</span>
-                    Reserve Your Spot
-                </a>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
