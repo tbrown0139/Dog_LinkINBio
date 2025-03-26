@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page Not Found - Paws in Paradise">
+    <meta name="description" content="Page Not Found - Ruff Ranch">
     <meta name="theme-color" content="#4FD1C5">
     
     <!-- Preload critical assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style">
     <link rel="preload" as="image" href="/images/hawaii-bg.webp">
     
-    <title>Page Not Found | Paws in Paradise</title>
+    <title>Page Not Found | Ruff Ranch</title>
     
     <style>
         :root {
@@ -30,8 +30,17 @@
         body {
             min-height: 100vh;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-                        url('/images/hawaii-bg.webp') center/cover fixed;
+            background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)
+                ),
+                url('bg.jpg') center/cover no-repeat fixed;
+            /* Optimize for mobile */
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             display: grid;
             place-items: center;
             padding: 1rem;
@@ -43,9 +52,9 @@
         }
 
         .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border-radius: 20px;
             padding: 2rem;
             box-shadow: var(--shadow);
@@ -104,16 +113,23 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer .powered-by {
+            opacity: 0.45;
+            color: rgba(200, 200, 200, 0.8);
         }
 
         .footer a {
-            color: var(--primary);
+            color: rgba(200, 200, 200, 0.8);
             text-decoration: none;
-            transition: opacity 0.2s ease;
+            transition: all 0.2s ease;
         }
 
         .footer a:hover {
             opacity: 0.8;
+            color: #cccccc;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -130,17 +146,17 @@
             <span class="error-emoji">🐾</span>
             <h1>Oops! Page Not Found</h1>
             <p class="error-message">
-                Looks like this pup wandered off to chase a wave! 
-                Let's get you back to paradise.
+                Looks like this pup wandered off the ranch! 
+                Let's get you back on the trail.
             </p>
             <a href="/" class="button">
                 <span>🏠</span>
-                Return to Home
+                Return to Ranch
             </a>
         </div>
         <footer class="footer">
-            <div>© <span id="year"></span> Paws in Paradise. All rights reserved.</div>
-            <div>Powered by <a href="https://knovon.com" target="_blank" rel="noopener">Knovon</a></div>
+            <div>© <span id="year"></span> Ruff Ranch. All rights reserved.</div>
+            <div class="powered-by">Powered by <a href="https://knovon.org" target="_blank" rel="noopener">Knovon</a></div>
         </footer>
     </main>
 
