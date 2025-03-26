@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ruff Ranch - Hawaii's Premier Mobile Dog Daycare">
+    <meta name="description" content="Ruff Ranch - North Shore's Premier Mobile Dog Daycare Bus. Serving Oahu with adventure-filled puppy field trips and socialization experiences.">
     <meta name="theme-color" content="#4FD1C5">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="dog daycare, north shore, oahu, hawaii, mobile dog care, pup bus, dog adventures, pet services">
+    <meta property="og:title" content="Ruff Ranch | North Shore Pup Bus">
+    <meta property="og:description" content="Join the pack at Ruff Ranch - North Shore's mobile dog daycare adventure bus. Daily excursions and socialization for your furry friends.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
     
     <!-- Preload critical assets -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" as="style">
     <link rel="preload" as="image" href="/images/hawaii-bg.webp">
     
-    <title>Ruff Ranch | Hawaii's Mobile Dog Daycare</title>
+    <title>Ruff Ranch | North Shore Pup Bus - Mobile Dog Adventures</title>
     
     <!-- Critical CSS inline for faster paint -->
     <style>
@@ -162,3 +169,19 @@
                     Our Adventures
                 </a>
                 <a href="/booking" class="button">
+                    <span>🐕</span>
+                    Reserve Your Spot
+                </a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div>© <span id="year"></span> Ruff Ranch. All rights reserved.</div>
+            <div class="powered-by">Page Powered by <a href="https://knovon.org" target="_blank" rel="noopener">Knovon</a></div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
