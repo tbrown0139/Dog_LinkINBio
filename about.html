@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Ruff Ranch - North Shore's Premier Mobile Dog Daycare Bus. Experience the adventure with Hawaii's most unique pet service.">
+    <meta name="theme-color" content="#4FD1C5">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="dog daycare oahu, north shore dog care, hawaii pup bus, mobile dog daycare, pet services north shore">
+    <meta property="og:title" content="About Ruff Ranch | North Shore Pup Bus">
+    <meta property="og:description" content="Discover the Ruff Ranch experience - where every dog's adventure begins on North Shore, Oahu.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <title>About Us | Ruff Ranch - North Shore Pup Bus</title>
+    
+    <style>
+        :root {
+            --primary: #4FD1C5;
+            --text: #2D3748;
+            --background: #F7FAFC;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: 
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)
+                ),
+                url('bg.jpg') center/cover no-repeat fixed;
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1rem;
+            color: white;
+            text-align: center;
+            margin-bottom: -2rem;
+        }
+
+        .hero-content {
+            transform: translateY(-10%);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-5%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(-10%);
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            max-width: 600px;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 32px 32px 0 0;
+            padding: 3rem 1.5rem;
+            margin-top: -2rem;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: var(--text);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            color: #4A5568;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            color: var(--text);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .feature p {
+            color: #4A5568;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: transform 0.2s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.875rem;
+            color: var(--text);
+        }
+
+        .footer .powered-by {
+            opacity: 0.45;
+            color: rgba(200, 200, 200, 0.8);
+        }
+
+        .footer a {
+            color: rgba(200, 200, 200, 0.8);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
+            color: #cccccc;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back</a>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Ruff Ranch</h1>
+            <p>North Shore's Premier Mobile Dog Adventure Experience</p>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="section">
+            <h2>Our Story</h2>
+            <p>Welcome to Ruff Ranch, where every day is an adventure for your four-legged family members. Born from a love of dogs and the beautiful North Shore of Oahu, we created a unique mobile daycare experience that brings together socialization, exercise, and pure joy.</p>
+            <p>Our custom-designed adventure bus brings the excitement of exploration to your pup, combining the freedom of outdoor adventures with the safety and structure of professional pet care.</p>
+        </section>
+
+        <section class="section">
+            <h2>The Ruff Ranch Experience</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-emoji">🚐</div>
+                    <h3>Adventure Bus</h3>
+                    <p>Custom-designed mobile facility with climate control and safety features for the perfect adventure.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-emoji">🏖️</div>
+                    <h3>North Shore Tours</h3>
+                    <p>Daily excursions to beautiful locations across Oahu's North Shore.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-emoji">🦮</div>
+                    <h3>Professional Care</h3>
+                    <p>Certified handlers ensuring safety and fun for every pup in our care.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Our Mission</h2>
+            <p>At Ruff Ranch, we believe every dog deserves adventure, socialization, and professional care. Our mission is to provide a unique daycare experience that enriches your dog's life through exploration, play, and companionship.</p>
+        </section>
+
+        <footer class="footer">
+            <div>© <span id="year"></span> Ruff Ranch. All rights reserved.</div>
+            <div class="powered-by">Page Powered by <a href="https://knovon.org" target="_blank" rel="noopener">Knovon</a></div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 
