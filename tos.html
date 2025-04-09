@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service - North Shore Pup Bus Excursion - North Shore's Premier Mobile Dog Daycare Bus">
+    <meta name="theme-color" content="#4FD1C5">
+    
+    <title>Terms of Service | North Shore Pup Bus Excursion</title>
+    
+    <style>
+        :root {
+            --primary: #4FD1C5;
+            --text: #2D3748;
+            --background: #F7FAFC;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                        url('bg.jpg') center/cover no-repeat fixed;
+            background-attachment: scroll;
+        }
+
+        .hero {
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            transform: translateY(-10%);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-content img {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 32px 32px 0 0;
+            padding: 3rem 1.5rem;
+            margin-top: -2rem;
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        .terms-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+            color: var(--text);
+        }
+
+        .terms-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .terms-section h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--text);
+        }
+
+        .terms-section p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #4A5568;
+        }
+
+        .terms-section ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+            color: #4A5568;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.75rem;
+            line-height: 1.6;
+        }
+
+        .numbered-section {
+            counter-reset: section;
+        }
+
+        .numbered-section h3::before {
+            counter-increment: section;
+            content: counter(section) ". ";
+        }
+
+        .back-button {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: transform 0.2s ease;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 0.875rem;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer .powered-by {
+            opacity: 0.45;
+            color: rgba(200, 200, 200, 0.8);
+        }
+
+        .footer a {
+            color: var(--text);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5%); }
+            to { opacity: 1; transform: translateY(-10%); }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .terms-content {
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back</a>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <img src="logo.jpg" alt="North Shore Pup Bus Excursion Logo">
+            <h1>Terms of Service</h1>
+            <p>Terms and Conditions for North Shore Pup Bus Excursion Services</p>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="terms-content">
+            <section class="terms-section">
+                <h2>Introduction</h2>
+                <p>Welcome to North Shore Pup Bus Excursion! Using our dog transportation, pick-up, excursions, and drop off You agree to the following terms and conditions. Please read them carefully before using our services. These terms apply to all services provided by North Shore Pup Bus Excursion LLC.</p>
+            </section>
+
+            <div class="numbered-section">
+                <section class="terms-section">
+                    <h2>1. Services</h2>
+                    <p>North Shore Pup Bus Excursion provides the following services:</p>
+                    <ul>
+                        <li>Dog transportation by bus, on our "North shore pup bus", to and from designated locations for exercise activities.</li>
+                        <li>Pick-up and drop-off at specified times and locations.</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>2. Booking and Payment</h2>
+                    <ul>
+                        <li>All bookings must be made through the NorthShorePupBusExcursion.com website, app, or via phone.</li>
+                        <li>Payment must be made at the time of booking unless otherwise agreed upon.</li>
+                        <li>Cancellations made less than 24 hours before the scheduled pick-up time will incur a cancellation fee of $50.</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>3. Dog Health and Safety</h2>
+                    <ul>
+                        <li>Owners must ensure that their dogs are in good health and free from contagious diseases before participating in North Shore Pup Bus Excursion services.</li>
+                        <li>Dogs must be vaccinated, including rabies, distemper, parvovirus, and other applicable vaccines.</li>
+                        <li>Owners must inform North Shore Pup Bus Excursion of any medical conditions, behavioral issues, or specific needs their dog may have.</li>
+                        <li>North Shore Pup Bus Excursion reserves the right to refuse service to any dog that exhibits aggressive or dangerous behavior.</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>4. Transportation</h2>
+                    <ul>
+                        <li>Dogs will be transported in a specially designed, safe, and secure bus. Each dog will be placed and buckled in an individual space to ensure comfort and safety during transportation.</li>
+                        <li>North Shore Pup Bus Excursion takes all reasonable precautions to ensure the safety of dogs during transportation. However, owners acknowledge that there are inherent risks associated with vehicle transportation (see waiver form below).</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>5. Liability</h2>
+                    <ul>
+                        <li>North Shore Pup Bus Excursion will take reasonable care of your dog while in our custody. However, we are not responsible for any injuries, illnesses, or accidents that may occur during transportation or offsite activities, unless caused by extreme negligence on our part.</li>
+                        <li>North Shore Pup Bus Excursion will not be liable for any damage or loss of personal property, including leashes, collars, harnesses, or toys.</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>6. Owner Responsibilities</h2>
+                    <ul>
+                        <li>Owners must ensure their dog is prepared for pick-up at the agreed time.</li>
+                        <li>Dogs must wear a harness / collar with identification and a leash for pick-up and drop-off.</li>
+                        <li>Owners must notify North Shore Pup Bus Excursion of any changes to their dog's health or behavior prior to the scheduled service.</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>7. Cancellation and Rescheduling</h2>
+                    <ul>
+                        <li>Owners may cancel or reschedule services up to 24 hours before the scheduled pick-up time without penalty.</li>
+                        <li>Late cancellations or no-shows will result in a full charge for the service.</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>8. Photography and Media</h2>
+                    <ul>
+                        <li>North Shore Pup Bus Excursion may take photographs or videos of the dogs during transportation or activities for marketing and promotional purposes. By using our services, you consent to the use of such media unless you notify us otherwise.</li>
+                    </ul>
+                </section>
+
+                <section class="terms-section">
+                    <h2>9. Changes to Terms and Conditions</h2>
+                    <ul>
+                        <li>North Shore Pup Bus Excursion reserves the right to modify these terms and conditions at any time. Changes will be communicated via our website or email. Continued use of our services after such changes will constitute your acceptance of the new terms.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <section class="terms-section waiver-section">
+                <h2>Waiver Form for North Shore Pup Bus Excursion LLC</h2>
+                <h3>Acknowledgment of Risk and Release of Liability</h3>
+                <p>This waiver is intended to ensure that dog owners understand and acknowledge the potential risks associated with using North Shore Pup Bus Excursion LLC transportation and excursion activities.</p>
+                
+                <section class="terms-section">
+                    <h3>1. Risks Associated with Transportation</h3>
+                    <p>I, the undersigned, acknowledge that I am aware of the potential risks involved in transporting my dog in a vehicle, including but not limited to:</p>
+                    <ul>
+                        <li>Sudden stops, sharp turns, or accidents.</li>
+                        <li>Potential for injury or stress caused by transportation.</li>
+                        <li>Unforeseen road conditions or external factors beyond North Shore Pup Bus Excursion control.</li>
+                    </ul>
+                    <p>I understand that while North Shore Pup Bus Excursion takes all reasonable precautions to ensure the safety of my dog during transportation, there are inherent risks that cannot be fully eliminated.</p>
+                </section>
+
+                <section class="terms-section">
+                    <h3>2. Health and Safety Acknowledgment</h3>
+                    <p>I confirm that my dog is in good health, up-to-date on vaccinations, and free of contagious diseases. I will notify North Shore Pup Bus Excursion of any known medical conditions or behavioral issues that may impact my dog's safety or the safety of others.</p>
+                </section>
+
+                <section class="terms-section">
+                    <h3>3. Voluntary Participation</h3>
+                    <p>I voluntarily allow North Shore Pup Bus Excursion to transport my dog and participate in excursion activities. I understand that this activities may include walking, running and excursions in various environments (land acres with grass, water and plants), and I accept any inherent risks associated with these activities.</p>
+                </section>
+
+                <section class="terms-section">
+                    <h3>4. Release of Liability</h3>
+                    <p>In consideration of North Shore Pup Bus Excursion services, I agree to release, discharge, and hold harmless North Shore Pup Bus Excursion LLC its owners, employees, and agents from any and all claims, damages, or injuries that may arise during the transportation, excursion or walking of my dog.</p>
+                </section>
+
+                <section class="terms-section">
+                    <h3>5. Emergency Medical Treatment</h3>
+                    <p>In the event of an emergency, I authorize North Shore Pup Bus Excursion to reach out to me to seek medical treatment for my dog at the nearest veterinary clinic. North Shore Pup Bus Excursion and I will coordinate emergency procedure of transportation of dog to clinic. I agree to be responsible for any costs incurred as a result of medical treatment.</p>
+                </section>
+
+                <section class="terms-section">
+                    <h3>6. Indemnification</h3>
+                    <p>I agree to indemnify and hold harmless North Shore Pup Bus Excursion LLC, its employees, and agents from any claims or actions arising from my failure to disclose any health issues, aggressive behavior, or other conditions that may affect my dog's safety or the safety of others.</p>
+                </section>
+
+                <section class="terms-section">
+                    <h3>7. Confirmation of Understanding</h3>
+                    <p>I have read and understand the above waiver. By clicking the submit button, I acknowledge that I fully understand the risks associated with North Shore Pup Bus Excursion LLC services and voluntarily agree to these terms.</p>
+                </section>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <div>© <span id="year"></span> North Shore Pup Bus Excursion. All rights reserved. | <a href="tos.html">Terms of Service</a></div>
+            <div class="powered-by">Page Powered by <a href="https://knovon.org" target="_blank" rel="noopener">Knovon</a></div>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 
